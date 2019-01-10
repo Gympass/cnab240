@@ -73,8 +73,8 @@ module Cnab240::Arquivo
     # @return [ Array<Cnab240::Arquivo::Arquivo> ] A list of +Cnab240::Arquivo::Arquivo+ instances representing the contents read.
     #
     # @since 0.0.20
-    def self.load(io)
-      Cnab240::Builder.new(io).arquivos
+    def self.load(io, layout_version = nil)
+      Cnab240::Builder.new(io, layout_version).arquivos
     end
 
     def auto_fill
